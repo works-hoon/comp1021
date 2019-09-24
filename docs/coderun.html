@@ -7,11 +7,15 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<title>COMP1021</title>
 	<link rel="stylesheet" href="static/stylesheet/basic.css" type="text/css" />
-	<link rel="stylesheet" href="static/stylesheet/iframe.css" type="text/css" />
-	<link rel="stylesheet" href="static/stylesheet/pygments.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/codemirror.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/activecode.css" type="text/css" />
+	<link rel="stylesheet" href="static/stylesheet/tabbedstuff.css" type="text/css" />
+	<link rel="stylesheet" href="static/stylesheet/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="static/stylesheet/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+
+	<!-- <link rel="stylesheet" href="static/stylesheet/iframe.css" type="text/css" />
+	<link rel="stylesheet" href="static/stylesheet/pygments.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/clickable.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/pytutor.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/modal-basic.css" type="text/css" />
@@ -22,17 +26,50 @@
 	<link rel="stylesheet" href="static/stylesheet/lib/prettify.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/poll.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/showEval.css" type="text/css" />
-	<link rel="stylesheet" href="static/stylesheet/tabbedstuff.css" type="text/css" />
-	<!-- <link rel="stylesheet" href="static/stylesheet/video.css" type="text/css" /> -->
-	<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/bootstrap.min.css" type="text/css" /> -->
-	<link rel="stylesheet" href="static/stylesheet/jquery-ui-1.10.3.custom.min.css" type="text/css" />
-	<!-- <link rel="stylesheet" href="static/stylesheet/bootstrap-sphinx.css" type="text/css" /> -->
+	<link rel="stylesheet" href="static/stylesheet/video.css" type="text/css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/2.3.1/bootstrap.min.css" type="text/css" />
+	<link rel="stylesheet" href="static/stylesheet/bootstrap-sphinx.css" type="text/css" />
 	<link rel="stylesheet" href="static/stylesheet/user-highlights.css" type="text/css" />
-	<link rel="stylesheet" href="static/stylesheet/runestone-custom-sphinx-bootstrap.css" type="text/css" />
-	<!-- <style>
+	<style>
 	.exercise{margin:50px;}
 	</style> -->
-	<!-- <link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" /> -->
+	
+	<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+	<!-- 고재훈 수정 css 부분 -->
+	<style>
+	h1,h2{margin-top:0;}
+	.cont_section h1{padding-top:20px;}
+	.cont_section{margin-bottom:25px;}
+	.navbar{margin-bottom:10px;}
+	.markdown_wrap{padding:0 15px;}
+	.ac_section.alert{border:0}
+	.code_wrap{position:relative;padding-bottom:30px;}
+	.code_wrap:after{content:'';clear:both;display:block;height:0;overflow:hidden;line-height:0;font-size:0;}
+	.code_wrap .code_result{float:right;width:50%;}
+	.code_wrap .code_area{float:left;width:50%;}
+	.code_wrap .btn_result{position:absolute;left:0;bottom:0;width:100%;height:30px;}
+	.code_wrap .code_area{resize:none;height:300px;border-color:#000}
+	.code_wrap .result_canvas{height:250px;border:1px solid #000;border-left:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+	.code_wrap .result_canvas canvas{width:100%;height:248px;}
+	.code_wrap .result_canvas canvas:last-child{margin-top:-248px !important;}
+	.code_wrap .result_console{border-radius:0;padding:3px;margin:0;height:50px;border-color:#000;border-width:0 1px 1px 0}
+	.video_container{width:100%;height:0;padding-top:56.25%;position:relative;}
+	.video_container iframe{position:absolute;width:100%;height:100%;left:0;top:0;border:0;}
+	.survey_container{width:100%;height:250px;}
+	@media (max-width: 768px){
+		body{margin:0;}
+		.navbar-brand{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:calc(100% - 114px);}
+		.container>.navbar-header, .container>.navbar-collapse{margin-right:0;margin-left:0;}
+		.brand-logo{margin-left:15px;}
+		.code_wrap{padding-bottom:0;}
+		.code_wrap .code_area{height:200px;}
+		.code_wrap .btn_result{position:static;}
+		.code_wrap .code_result.before{display:none;}
+		.code_wrap .code_result,
+		.code_wrap .code_area{float:none;width:100%;}
+	}
+	</style>
 </head>
 <body>
 <!-- Begin navbar -->
@@ -45,22 +82,24 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-
 			<div>
 				<a class="brand-logo" style='background: transparent url("static/img/logo_small.png") no-repeat 0px 0px;' href="../../index.html">&nbsp; </a>
 				<a class="navbar-brand">COMP1021 - Introduction to Computer Science</a>
 			</div>
 		</div>
-		<div class="navbar-collapse collapse navbar-ex1-collapse">
+		<!-- <div class="navbar-collapse collapse navbar-ex1-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="divider-vertical"></li>
 				<li class="divider-vertical"></li>
 			</ul>
-		</div>
+		</div> -->
 	</div>
 </div>
 
 <div class="container" id="main-content">
+
+<article class="cont_section">
+<section class="markdown_wrap">
 <markdown>
 # Loops
 ### David Rossiter, Gibson Lam and Sung Kim
@@ -73,7 +112,27 @@
 1. Write code using nested loops
 </markdown>
 
-<pycode>
+</section>
+
+<form class="code_wrap" id="idTemp1">
+<textarea class="code_area" cols="40" rows="10">import turtle
+
+t = turtle.Turtle()
+t.forward(100)
+
+print "Hello World" 
+</textarea>
+<button class="btn_result" type="button" onclick="runit('idTemp1')">Run</button> 
+<div class="code_result before">
+	<!-- If you want turtle graphics include a canvas -->
+	<div class="result_canvas"></div>
+	<pre class="result_console"></pre>
+</div>
+</form>
+</article>
+
+
+<!-- <pycode>
 import turtle
 
 turtle.circle(10)
@@ -83,17 +142,39 @@ turtle.circle(40)
 turtle.circle(50)
 turtle.circle(60)
 turtle.circle(70)
-</pycode>
+</pycode> -->
 
-<figure class="video_container">
-	<iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+<article class="cont_section">
+	<figure class="video_container">
+		<iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
+	</figure>
+</article>
 
+<article class="cont_section">
+<section class="markdown_wrap">
 <markdown>
 ## Data Camp example
 </markdown>
+</section>
+<form class="code_wrap" id="idTemp2">
+<textarea class="code_area" cols="40" rows="10">import turtle
 
-<div data-datacamp-exercise data-lang="python" data-height="auto">
+t = turtle.Turtle()
+t.forward(100)
+
+print "Hello World" 
+</textarea>
+<button class="btn_result" type="button" onclick="runit('idTemp2')">Run</button> 
+<div class="code_result before">
+	<!-- If you want turtle graphics include a canvas -->
+	<div class="result_canvas"></div>
+	<pre class="result_console"></pre>
+</div>
+</form> 
+</article>
+
+
+<!-- <div data-datacamp-exercise data-lang="python" data-height="auto">
 	<code data-type="pre-exercise-code"></code>
 	<code data-type="sample-code">
 		import numpy as np
@@ -107,13 +188,33 @@ turtle.circle(70)
 	<code data-type="solution"></code>
 	<code data-type="sct"></code>
 	<div data-type="hint">Just press 'Run'.</div>
-</div>
+</div> -->
 
+<article class="cont_section">
+<section class="markdown_wrap">
 <markdown>
 ## Tensorflow Code
 </markdown>
+</section>
 
-<div data-datacamp-exercise data-lang="python" data-height="auto">
+<form class="code_wrap" id="idTemp3">
+<textarea class="code_area" cols="40" rows="10">import turtle
+
+t = turtle.Turtle()
+t.forward(100)
+
+print "Hello World" 
+</textarea>
+<button class="btn_result" type="button" onclick="runit('idTemp3')">Run</button> 
+<div class="code_result before">
+	<!-- If you want turtle graphics include a canvas -->
+	<div class="result_canvas"></div>
+	<pre class="result_console"></pre>
+</div>
+</form>
+</article>
+
+<!-- <div data-datacamp-exercise data-lang="python" data-height="auto">
 	<code data-type="pre-exercise-code">
 		import tensorflow as tf
 	</code>
@@ -124,15 +225,19 @@ turtle.circle(70)
 	<code data-type="solution"></code>
 	<code data-type="sct"></code>
 	<div data-type="hint">Just press 'Run'.</div>
-</div>
+</div> -->
+<!-- <iframe height="400px" width="100%" src="https://repl.it/@SungKim3/UsedMintcreamExabyte?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe> -->
 
-<iframe height="400px" width="100%" src="https://repl.it/@SungKim3/UsedMintcreamExabyte?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<article class="cont_section">
+<section class="markdown_wrap">
 <markdown>
 ## Quick Survey
 </markdown>
-<figure class="video_container">
-	<iframe class="embed-responsive-item" src="https://app.sli.do/event/mnc2cikl/embed/polls/2028173" width="500" height="300" scrolling="no"></iframe>
+</section>
+<figure class="survey_container">
+	<iframe class="embed-responsive-item" frameborder="0" src="https://app.sli.do/event/mnc2cikl/embed/polls/2028173" width="100%" height="100%" scrolling="no"></iframe>
 </figure>
+</article>
 <!-- EOC -->
 <!-- markdown -> html -->
 
@@ -144,6 +249,54 @@ turtle.circle(70)
 	</div>
 </footer>
 
+<script type="text/javascript" src="static/javascript/jquery.js"></script>
+<script type="text/javascript" src="static/javascript/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="static/javascript/jquery-ui-1.10.3.custom.min.js"></script>
+
+<!-- markdown 관련 -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+	var markTags = document.getElementsByTagName("markdown");
+	for (i = 0; i < markTags.length; i++) {
+		markTags[i].innerHTML = marked(markTags[i].innerHTML);
+	}
+	var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
+				 + '<textarea data-component="activecode" id="code_id" data-lang="python" data-timelimit=25000 data-caption="">';
+	var codeTail = '</textarea></div>';
+	var codeTags = document.getElementsByTagName("pycode");
+	for (i = 0; i < codeTags.length; i++) {
+		codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
+	}
+</script>
+
+<!-- pycode 관련 -->
+<script type="text/javascript">
+	eBookConfig = {};
+	eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+	eBookConfig.app = eBookConfig.host+'/runestone';
+	eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+	eBookConfig.course = 'cs20sk';
+	eBookConfig.logLevel = 0;
+	eBookConfig.loginRequired = false;
+	eBookConfig.build_info = "unknown";
+	eBookConfig.isLoggedIn = false;
+	eBookConfig.useRunestoneServices = false;
+	eBookConfig.python3 = true;
+	eBookConfig.basecourse = 'cs20sk';
+	eBookConfig.runestone_version = '3.0.5';
+</script>
+<script type="text/javascript" src="static/javascript/runestonebase.js"></script>
+<script type="text/javascript" src="static/javascript/bookfuncs.js"></script>
+<script type="text/javascript" src="static/javascript/codemirror.js"></script>
+<script type="text/javascript" src="static/javascript/activecode.js"></script>
+<script type="text/javascript" src="static/javascript/timed_activecode.js"></script>
+<script type="text/javascript" src="static/javascript/skulpt.min.js"></script>
+<script type="text/javascript" src="static/javascript/skulpt-stdlib.js"></script>
+
+<!-- datacamp 관련 -->
+<!-- <script async src="https://cdn.datacamp.com/dcl-react.js.gz"></script> -->
+
+<!--
 <script type="text/javascript">
 	var DOCUMENTATION_OPTIONS = {
 		URL_ROOT:    '/',
@@ -154,23 +307,16 @@ turtle.circle(70)
 		SOURCELINK_SUFFIX: '.txt'
 	};
 </script>
-<script type="text/javascript" src="static/javascript/runestonebase.js"></script>
-<script type="text/javascript" src="static/javascript/jquery.js"></script>
-<script type="text/javascript" src="static/javascript/underscore.js"></script>
 <script type="text/javascript" src="static/javascript/doctools.js"></script>
+<script type="text/javascript" src="static/javascript/underscore.js"></script>
 <script type="text/javascript" src="static/javascript/jquery.highlight.js"></script>
-<script type="text/javascript" src="static/javascript/bookfuncs.js"></script>
 <script type="text/javascript" src="static/javascript/codemirror.js"></script>
 <script type="text/javascript" src="static/javascript/xml.js"></script>
 <script type="text/javascript" src="static/javascript/css.js"></script>
 <script type="text/javascript" src="static/javascript/htmlmixed.js"></script>
 <script type="text/javascript" src="static/javascript/python.js"></script>
 <script type="text/javascript" src="static/javascript/javascript.js"></script>
-<script type="text/javascript" src="static/javascript/activecode.js"></script>
-<script type="text/javascript" src="static/javascript/skulpt.min.js"></script>
-<script type="text/javascript" src="static/javascript/skulpt-stdlib.js"></script>
 <script type="text/javascript" src="static/javascript/clike.js"></script>
-<script type="text/javascript" src="static/javascript/timed_activecode.js"></script>
 <script type="text/javascript" src="static/javascript/animationbase.js"></script>
 <script type="text/javascript" src="static/javascript/mchoice.js"></script>
 <script type="text/javascript" src="static/javascript/timedmc.js"></script>
@@ -200,7 +346,6 @@ turtle.circle(70)
 <script type="text/javascript" src="static/javascript/showEval.js"></script>
 <script type="text/javascript" src="static/javascript/tabbedstuff.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/javascript" src="static/javascript/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="static/javascript/jquery-fix.js"></script>
 <script type="text/javascript" src="static/javascript/bootstrap-3.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="static/javascript/bootstrap-sphinx.js"></script>
@@ -212,41 +357,39 @@ turtle.circle(70)
 <script type="text/javascript" src="static/javascript/jquery.idle-timer.js"></script>
 <script type="text/javascript" src="static/javascript/processing-1.4.1.min.js"></script>
 <script type="text/javascript" src="static/javascript/jquery.hotkey.js"></script>
-<script type="text/javascript" src="static/javascript/jquery-migrate-1.2.1.min.js"></script>
-<script async src="https://cdn.datacamp.com/dcl-react.js.gz"></script>
-<script type="text/javascript">
-	eBookConfig = {};
-	eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
-	eBookConfig.app = eBookConfig.host+'/runestone';
-	eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
-	eBookConfig.course = 'cs20sk';
-	eBookConfig.logLevel = 0;
-	eBookConfig.loginRequired = false;
-	eBookConfig.build_info = "unknown";
-	eBookConfig.isLoggedIn = false;
-	eBookConfig.useRunestoneServices = false;
-	eBookConfig.python3 = true;
-	eBookConfig.basecourse = 'cs20sk';
-	eBookConfig.runestone_version = '3.0.5';
-</script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-	var markTags = document.getElementsByTagName("markdown");
-	for (i = 0; i < markTags.length; i++) {
-		markTags[i].innerHTML = marked(markTags[i].innerHTML);
-	}
-	var codeHead = '<div data-childcomponent="wdtpd_turtle_assn_4" class="runestone explainer ac_section alert alert-warning">'
-				 + '<textarea data-component="activecode" id="code_id" data-lang="python"  data-timelimit=25000 data-caption="">';
-	var codeTail = '</textarea></div>';
-	var codeTags = document.getElementsByTagName("pycode");
-	for (i = 0; i < codeTags.length; i++) {
-		codeTags[i].innerHTML = codeHead + codeTags[i].innerHTML + codeTail;
-	}
+	$('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+	$('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
 </script>
+-->
 
-<script>
-  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
-  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+<!-- skulpt 실행 코드 -->
+<script type="text/javascript"> 
+function runit(obj) {
+	var tar = document.querySelector('#'+obj);
+	var prog = tar.querySelector('.code_area').value; 
+	var mypre = tar.querySelector('.result_console');
+	mypre.innerHTML = '';
+	Sk.pre = mypre;
+	Sk.configure({output:function(text){
+	    mypre.innerHTML = mypre.innerHTML + text;
+	    tar.querySelector('.code_result').classList.remove('before');
+	}, read:function(x){
+		if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+    	return Sk.builtinFiles["files"][x];
+	}});
+	(Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = tar.querySelector('.result_canvas');
+	var myPromise = Sk.misceval.asyncToPromise(function() {
+		return Sk.importMainWithBody("<stdin>", false, prog, true);
+	});
+	myPromise.then(function(mod) {
+		console.log('success');
+	},
+	function(err) {
+		console.log(err.toString());
+	});
+} 
 </script>
 </body>
 </html>
